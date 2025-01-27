@@ -3,3 +3,21 @@ service:
   identifier: k8s_git
   orgIdentifier: default
   projectIdentifier: default_project
+  gitOpsEnabled: true
+  serviceDefinition:
+    spec:
+      manifests:
+        - manifest:
+            identifier: service
+            type: DeploymentRepo
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: GitHub
+                  gitFetchType: Branch
+                  paths:
+                    - full_2048.yaml
+                  branch: main
+                  repoName: k8s-starter
+    type: Kubernetes
