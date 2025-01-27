@@ -1,0 +1,9 @@
+service:
+  name: k8s-non-git
+  identifier: k8snongit
+  serviceDefinition:
+    type: Kubernetes
+    spec: {}
+  gitOpsEnabled: false
+  orgIdentifier: default
+  projectIdentifier: default_project
