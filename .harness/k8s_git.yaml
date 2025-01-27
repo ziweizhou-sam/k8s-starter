@@ -1,0 +1,5 @@
+service:
+  name: k8s_git
+  identifier: k8s_git
+  orgIdentifier: default
+  projectIdentifier: default_project
