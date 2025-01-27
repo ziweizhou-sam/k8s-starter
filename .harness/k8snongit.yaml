@@ -3,7 +3,23 @@ service:
   identifier: k8snongit
   serviceDefinition:
     type: Kubernetes
-    spec: {}
+    spec:
+      manifests:
+        - manifest:
+            identifier: k8sstarter
+            type: K8sManifest
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: GitHub
+                  gitFetchType: Branch
+                  paths:
+                    - 2048_full.yaml
+                  repoName: k8s-starter
+                  branch: main
+              skipResourceVersioning: false
+              enableDeclarativeRollback: false
   gitOpsEnabled: false
   orgIdentifier: default
   projectIdentifier: default_project
