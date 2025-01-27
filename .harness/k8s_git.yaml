@@ -17,7 +17,7 @@ service:
                   connectorRef: GitHub
                   gitFetchType: Branch
                   paths:
-                    - full_2048.yaml
+                    - 2048_full.yaml
                   branch: main
                   repoName: k8s-starter
     type: Kubernetes
